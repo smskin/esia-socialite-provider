@@ -1,0 +1,12 @@
+version: '2'
+services:
+  php-cli:
+    build:
+      context: './../'
+      dockerfile: ./docker/Dockerfile
+      args:
+        - INSTALL_ZIP=true
+        - OPENSSL_ENABLE_GOST_SUPPORT=true
+    tty: true
+    volumes:
+      - ./../:/var/www/html:cached
