@@ -12,9 +12,10 @@
     "authors": [
         {
             "name": "Sergey Mikhaylov",
-            "email": "serg@msoinvest.com"
+            "email": "sms7@yandex.ru"
         }
     ],
+    "homepage": "https://github.com/smskin/esia-socialite-provider",
     "support": {
         "issues": "https://github.com/smskin/esia-socialite-provider/issues",
         "source": "https://github.com/smskin/esia-socialite-provider"
@@ -29,9 +30,18 @@
     "suggest": {
         "ext-openssl": "SignerPKCS7 support"
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SMSkin\\SocialiteProviders\\ESIA\\Providers\\ServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "SMSkin\\SocialiteProviders\\ESIA\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
